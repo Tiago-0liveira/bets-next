@@ -18,6 +18,7 @@ model User {
   level       Int      @default(1)
   displayName String?
   bets        Bet[]
+  photoUrl    String?
 }
 
 model Bet {
