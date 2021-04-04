@@ -19,6 +19,7 @@ model User {
   displayName String?
   bets        Bet[]
   photoUrl    String?
+  uid         String
 }
 
 model Bet {
