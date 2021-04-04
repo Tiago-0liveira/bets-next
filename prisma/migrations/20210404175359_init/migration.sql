@@ -1,0 +1,23 @@
+-- CreateTable
+CREATE TABLE "User" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "lastSean" DATETIME NOT NULL,
+    "username" TEXT NOT NULL,
+    "level" INTEGER NOT NULL DEFAULT 1,
+    "displayName" TEXT
+);
+
+-- CreateTable
+CREATE TABLE "Bet" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "game" TEXT NOT NULL,
+    "value" REAL NOT NULL,
+    "won" BOOLEAN NOT NULL,
+    "userId" INTEGER NOT NULL,
+    FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- CreateIndex
+CREATE UNIQUE INDEX "User.username_unique" ON "User"("username");
