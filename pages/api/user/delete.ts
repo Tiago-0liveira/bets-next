@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import prisma from '../../../prisma/db'
-import IError from "../../../types/interfaces/ResponseError"
+import IError from "../../../@types/interfaces/ResponseError"
 import { User } from '.prisma/client'
-import IResUser from '../../../types/interfaces/ResponseUser'
+import IResUser from '../../../@types/interfaces/ResponseUser'
 
 
 export default async (req: NextApiRequest, res: NextApiResponse<IResUser | IError>) => {

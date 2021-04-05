@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import prisma from '../../../prisma/db'
-import IuserAll from '../../../types/interfaces/user-all'
-import TUsers from '../../../types/types/users'
-import IError from "../../../types/interfaces/ResponseError"
+import IuserAll from '../../../@types/interfaces/user-all'
+import TUsers from '../../../@types/types/users'
+import IError from "../../../@types/interfaces/ResponseError"
 
 
 export default async (req: NextApiRequest, res: NextApiResponse<IuserAll | IError>) => {
